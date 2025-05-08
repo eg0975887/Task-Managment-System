@@ -13,8 +13,9 @@ public class TaskSaver { // this file will write user inputted information and t
             folder.mkdir();
         }
 
+        String safeUsername = username.replaceAll("\\W+", "_");
         String safeTitle = task.getTitle().replaceAll("\\W+", "_"); // File name pattern: "Databases/username_task_title.json"
-        String fileName = "Databases/" + username + "_" + safeTitle + ".json";
+        String fileName = "Databases/" + safeUsername + "_" + safeTitle + ".json";
 
         try (FileWriter writer = new FileWriter(fileName)) {
             gson.toJson(task, writer);
