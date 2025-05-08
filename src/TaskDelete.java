@@ -36,7 +36,7 @@ public class TaskDelete {
         }
     }
 
-    public static String buildFilePath(String username, String title) {
+    public static String buildFilePath(String username, String title) { // improve safety of user input by removing file dangerous names
         String safeTitle = title.replaceAll("\\W+", "_");
         return "Databases/" + username + "_" + safeTitle + ".json";
     }

@@ -46,6 +46,7 @@ public class TaskView {
         }
         System.out.println("\nPress Enter to continue... ");
         scanner.nextLine();
+
     }
 
     public static TaskBlueprint loadTaskFromFile(String filePath) {

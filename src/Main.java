@@ -46,7 +46,7 @@ public class Main {
                 System.out.println("Edit Task");
                 UserInputMethod();
                 break;
-            case 4: // generate a list of files from Database
+            case 4: // generate a list of files from Database then have the user decide which to delete
                 System.out.println("Delete Task");
                 TaskDelete.deleteTaskFile();
                 UserInputMethod();
